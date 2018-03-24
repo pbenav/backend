@@ -29,3 +29,5 @@ nbproject/
 *.sublime-project
 /tests/tests/
 /tests/results/
+
+.editorconfig
