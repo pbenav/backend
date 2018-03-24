@@ -10,24 +10,14 @@ class Usuarios extends MY_Controller {
     protected $access = "Admin";
 
     public function index() {
-        $usuarios['data'] = $this->usuarios_model->get_usuarios();
-        $this->load->view('base/cabeceras');
-        $this->load->view('base/navbar');
-        $this->load->view('usuarios/usuarios', $usuarios);
-        $this->load->view('base/salir');
-        $this->load->view('base/pies');
+        $datos['data'] = $this->usuarios_model->get_usuarios();
+        $datos['_view']='usuarios/usuarios';
+        $this->load->view('base/base', $datos);
     }
 
-    public function insertar() {
-        
-        $data['_view']='usuarios/alta_usuario';
-        $this->load->view('base/base', $data);
-        
-        //$this->load->view('base/cabeceras');
-        //$this->load->view('base/navbar');
-//        $this->load->view('usuarios/alta_usuario');
-//        $this->load->view('base/salir');
-//        $this->load->view('base/pies');
+    public function insertar() {        
+        $datos['_view']='usuarios/alta_usuario';
+        $this->load->view('base/base', $datos);
     }
 
     public function guardar() {
@@ -67,14 +57,9 @@ class Usuarios extends MY_Controller {
 
     public function modificar($id = null) {
         if (!$id == null) {
-            $data['datos'] = $this->usuarios_model->get_usuario($id);
-            $this->load->view('base/cabeceras');
-            $this->load->view('base/navbar');
-            if (isset($data)) {
-                $this->load->view('usuarios/modificar_usuario', $data);
-            }
-            $this->load->view('base/salir');
-            $this->load->view('base/pies');
+            $datos['data'] = $this->usuarios_model->get_usuario($id);
+            $datos['_view']='usuarios/modificar_usuario';
+        $this->load->view('base/base', $datos);
         } else {
             redirect('usuarios');
         }

@@ -28,15 +28,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                                 <div class="">
                                                     <label class="control-label" for="rol">Rol de usuario</label>
                                                     <select class="form-control col-6" id="rol" name="rol">                                                        
-                                                        <option value="Admin"   <?php if($datos->rol === 'Admin') echo 'selected' ?>>Admin</option>
-                                                        <option value="Agente"  <?php if($datos->rol === 'Agente') echo 'selected' ?>>Agente</option>
-                                                        <option value="Usuario" <?php if($datos->rol === 'Usuario') echo 'selected' ?>>Usuario</option>
+                                                        <option value="Admin"   <?php if($data->rol === 'Admin') echo 'selected' ?>>Admin</option>
+                                                        <option value="Agente"  <?php if($data->rol === 'Agente') echo 'selected' ?>>Agente</option>
+                                                        <option value="Usuario" <?php if($data->rol === 'Usuario') echo 'selected' ?>>Usuario</option>
                                                     </select>
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label for="username" class="control-label">Usuario</label>
-                                                    <input value="<?php echo $datos->username; ?>" class="form-control col-8" type="text" name="username" id="username" required>
+                                                    <input value="<?php echo $data->username; ?>" class="form-control col-8" type="text" name="username" id="username" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="password" class="control-label">Contraseña</label>
@@ -47,12 +47,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                             <div class="form-control">
                                                 <div class="form-group">
                                                     <label for="codigo_usuario" class="control-label">Código de usuario</label>
-                                                    <input value="<?php echo $datos->codigo_usuario; ?>" class="form-control" type="text" name="codigo_usuario" id="codigo_usuario">
+                                                    <input value="<?php echo $data->codigo_usuario; ?>" class="form-control" type="text" name="codigo_usuario" id="codigo_usuario">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="parent_usuario" class="control-label">Depende de</label>
                                                     <div class="">
-                                                        <input value="<?php echo $datos->parent_usuario; ?>"class="form-control" type="text" name="parent_usuario" id="parent_usuario">
+                                                        <input value="<?php echo $data->parent_usuario; ?>"class="form-control" type="text" name="parent_usuario" id="parent_usuario">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
