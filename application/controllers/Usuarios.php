@@ -19,11 +19,15 @@ class Usuarios extends MY_Controller {
     }
 
     public function insertar() {
-        $this->load->view('base/cabeceras');
-        $this->load->view('base/navbar');
-        $this->load->view('usuarios/alta_usuario');
-        $this->load->view('base/salir');
-        $this->load->view('base/pies');
+        
+        $data['_view']='usuarios/alta_usuario';
+        $this->load->view('base/base', $data);
+        
+        //$this->load->view('base/cabeceras');
+        //$this->load->view('base/navbar');
+//        $this->load->view('usuarios/alta_usuario');
+//        $this->load->view('base/salir');
+//        $this->load->view('base/pies');
     }
 
     public function guardar() {

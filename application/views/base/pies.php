@@ -3,21 +3,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 if ($this->session->userdata("logged_in")) {
     ?>
-    <div class="card mb-3">
-        <div class="card-footer small text-muted">Actualizado <?php
-            $format = 'DATE_RFC822';
-            $time = time();
-            echo standard_date($format, $time);
-            ?>
-        </div>
-    </div><?php } ?>
 
-<!-- /.content-wrapper-->
-<footer class="sticky-footer">
-    <div class="container">
+
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+        <div class="container">
+                <div class="card-footer small text-muted">Actualizado <?php
+                    $format = 'DATE_RFC822';
+                    $time = time();
+                    echo standard_date($format, $time);
+                    ?>
+            <?php } ?>
         <div class="text-center">
             <small>Copyright © Siente 2018</small>
-        </div>
+        </div></div>
     </div>
 </footer>
 <!-- Scroll to Top Button-->
